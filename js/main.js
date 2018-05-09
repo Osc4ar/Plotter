@@ -14,9 +14,13 @@ var slider = document.getElementById('test-slider');
    }
   });
 
-window.onload = plot("sin", "x");
+window.onload = plot();
   
-function plot(expr, args) {
+function plot() {
+    var func_sel = document.getElementById("func_sel");
+    var arg = document.getElementById("argument");
+    var fullExpr = func_sel + "(" + arg + ")";
+    console.log(fullExpr);
     var data_var = [];
     for (let x = -5; x <= 5; x += 0.001) {
         data_var.push({y: Math.sin(x)});
