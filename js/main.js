@@ -14,8 +14,9 @@ var slider = document.getElementById('test-slider');
    }
   });
 
-window.onload = function () {
-    var expr = "sin(x)";
+window.onload = plot("sin", "x");
+  
+function plot(expr, args) {
     var data_var = [];
     for (let x = -5; x <= 5; x += 0.001) {
         data_var.push({y: Math.sin(x)});
