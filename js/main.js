@@ -18,8 +18,9 @@ window.onload = plot();
   
 function plot() {
     var func_sel = document.getElementById("func_sel");
+    var func = func_sel.options[func_sel.selectedIndex].text;
     var arg = document.getElementById("argument");
-    var fullExpr = func_sel + "(" + arg + ")";
+    var fullExpr = func + "(" + arg + ")";
     console.log(fullExpr);
     var data_var = [];
     for (let x = -5; x <= 5; x += 0.001) {
